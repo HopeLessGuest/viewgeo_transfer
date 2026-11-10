@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://pcnbxg9fmgyk.feishuapp.com/app/app_17fq2574p4w",
+      "permanent": false
+    }
+  ]
+}
