@@ -6,7 +6,27 @@
   <script>
     (() => {
       const destinationBase = "https://pcnbxg9fmgyk.feishuapp.com/app/app_17fq2574p4w";
-      const pathSuffix = window.location.pathname === "/" ? "" : window.location.pathname;
+      const routeMap = {
+        "/维境": "/viewgeo",
+        "/文档解析": "/doc-parse",
+        "/文档": "/documents",
+        "/文档问答": "/documents/chat",
+        "/法律文档": "/documents/legal",
+        "/文本转JSON": "/text-to-json",
+        "/智能写作": "/smart-writing",
+        "/智能搜索": "/ai-search",
+        "/图片生成": "/image-gen",
+        "/网页阅读": "/web-read",
+        "/法律": "/legal"
+      };
+      const originalPath = window.location.pathname;
+      let lookupPath = originalPath;
+      try {
+        lookupPath = decodeURI(originalPath);
+      } catch (_) {
+        // Keep the original path when it contains malformed percent escapes.
+      }
+      const pathSuffix = routeMap[lookupPath] || (originalPath === "/" ? "" : originalPath);
       window.location.replace(destinationBase + pathSuffix + window.location.search + window.location.hash);
     })();
   </script>
