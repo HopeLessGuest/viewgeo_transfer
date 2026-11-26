@@ -3,14 +3,12 @@
     {
       "source": "/",
       "destination": "https://pcnbxg9fmgyk.feishuapp.com/app/app_17fq2574p4w",
-      "permanent": false,
-      "preserveQueryParams": true
+      "permanent": false
     },
     {
       "source": "/:path*",
       "destination": "https://pcnbxg9fmgyk.feishuapp.com/app/app_17fq2574p4w/:path*",
-      "permanent": false,
-      "preserveQueryParams": true
+      "permanent": false
     }
   ]
 }
